@@ -1,4 +1,5 @@
-﻿using DAL.Entities;
+﻿using DAL.Configurations;
+using DAL.Entities;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 
@@ -14,6 +15,13 @@ namespace DAL.Context
             //Database.EnsureCreated();
         }
         
+        public DbSet<Product> Products { get; set; }
+        public DbSet<ProductBrand> ProductBrands { get; set; }
+        public DbSet<ProductType> ProductTypes { get; set; }
+        public DbSet<Order> Orders { get; set; }
+        public DbSet<OrderItem> OrderItems { get; set; }
+        public DbSet<DeliveryMethod> DeliveryMethods { get; set; }
+        
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             optionsBuilder.UseSqlServer("Server=(localdb)\\MSSQLLocalDB;Database=ShopProjectDb;MultipleActiveResultSets=true");
@@ -23,7 +31,10 @@ namespace DAL.Context
         {
             base.OnModelCreating(modelBuilder);
             
-
+            modelBuilder.ApplyConfiguration(new DeliveryMethodConiguration());
+            modelBuilder.ApplyConfiguration(new ProductConfiguration());
+            modelBuilder.ApplyConfiguration(new OrderItemConfiguration());
+            modelBuilder.ApplyConfiguration(new OrderConfiguration());
         }
     }
 }

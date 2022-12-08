@@ -7,6 +7,6 @@ namespace DAL.Entities
     {
         public string Name { get; set; }
         public Address Address { get; set; }
-        public virtual ICollection<CustomerBasket> CustomerBaskets { get; set; }
+        public virtual ICollection<Order> Orders { get; set; }
     }
 }

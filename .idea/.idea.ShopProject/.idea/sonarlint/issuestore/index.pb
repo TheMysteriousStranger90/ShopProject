@@ -11,7 +11,5 @@ $ShopProjectWebAPI/WeatherForecast.cs,b\b\bbe5d5fb30a4fda9901d9c8d59b0cb4d5a6ae
 0ShopProjectWebAPI/Properties/launchSettings.json,e\6\e6b0ea33b7d32669f286600d381f9a056209b045
 >
 DAL/DAL.csproj,d\8\d86dd49581f2123b337954982c26d5b73551acad
-G
-DAL/Entities/Address.cs,c\9\c9e3526a5dccc172d3bdbd3ab441c1b68714430f
-J
-DAL/Entities/BaseEntity.cs,8\6\86dc7ca9cc13a45737b8b6723bb0bb7255762fb3
+R
+"ShopProjectWebAPI/appsettings.json,2\2\22922d376b8f9786a6a7d441f7249d4febe9fb41
