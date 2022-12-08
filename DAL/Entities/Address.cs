@@ -1,21 +1,13 @@
-﻿namespace DAL.Entities
-{
-    public class Address : BaseEntity
-    {
-        public Address()
-        {
-        }
+﻿using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
+using Microsoft.EntityFrameworkCore;
 
-        public Address(string firstName, string lastName, string street, string city, string state, string zipcode)
-        {
-            FirstName = firstName;
-            LastName = lastName;
-            Street = street;
-            City = city;
-            State = state;
-            Zipcode = zipcode;
-        }
-        
+namespace DAL.Entities
+{
+    [Owned]
+    public class Address
+    {
         public string FirstName { get; set; }
         public string LastName { get; set; }
         public string Street { get; set; }
@@ -24,5 +16,6 @@
         public string Zipcode { get; set; }
         public string UserId { get; set; }
         public User User { get; set; }
+        
     }
 }

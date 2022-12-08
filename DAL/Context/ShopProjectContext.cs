@@ -31,6 +31,7 @@ namespace DAL.Context
         {
             base.OnModelCreating(modelBuilder);
             
+            modelBuilder.ApplyConfiguration(new UserConfiguration());
             modelBuilder.ApplyConfiguration(new DeliveryMethodConiguration());
             modelBuilder.ApplyConfiguration(new ProductConfiguration());
             modelBuilder.ApplyConfiguration(new OrderItemConfiguration());
