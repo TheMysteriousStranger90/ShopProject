@@ -52,7 +52,7 @@ namespace DAL.Repositories
 
         public void Add(T entity)
         {
-            _set.AddAsync(entity);
+            _set.Add(entity);
         }
 
         public void Update(T entity)
