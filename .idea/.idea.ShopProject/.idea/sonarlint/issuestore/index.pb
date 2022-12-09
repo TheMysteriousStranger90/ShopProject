@@ -25,10 +25,6 @@ J
 DAL/Entities/BasketItem.cs,d\2\d2cc64a1fd7a112d929c2ea4a3da74720f90e6f0
 \
 ,DAL/Specifications/SpecificationEvaluator.cs,0\d\0ddf95accae652f6eb6d481a68b374c1533f562b
-N
-DAL/Repositories/Repository.cs,c\7\c7cbba72e87a2f3648ad1b9678cae1a4e020d688
-M
-DAL/Interfaces/IUnitOfWork.cs,0\f\0f4ef9f6b16e95f2d1fed669290bd948a2b71bf8
 R
 "DAL/Entities/ProductItemOrdered.cs,3\0\30f9a4509267e6c0e7581e5234a4940d8fa0a133
 L

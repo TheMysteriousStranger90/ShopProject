@@ -4,6 +4,8 @@ using System.Linq;
 using System.Threading.Tasks;
 using DAL.Context;
 using DAL.Entities;
+using DAL.Interfaces;
+using DAL.Repositories;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -30,6 +32,8 @@ namespace ShopProjectWebAPI
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddScoped(typeof(IRepository<>), (typeof(Repository<>)));
+            
             services.AddDbContext<ShopProjectContext>(options =>
             {
                 options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection"));
