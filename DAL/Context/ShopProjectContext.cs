@@ -1,5 +1,6 @@
 ﻿using DAL.Configurations;
 using DAL.Entities;
+using DAL.SeedData;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 
@@ -36,6 +37,8 @@ namespace DAL.Context
             modelBuilder.ApplyConfiguration(new ProductConfiguration());
             modelBuilder.ApplyConfiguration(new OrderItemConfiguration());
             modelBuilder.ApplyConfiguration(new OrderConfiguration());
+            
+            SeedInitializer.ContextSeed(modelBuilder);
         }
     }
 }

@@ -35,8 +35,20 @@ namespace ShopProjectWebAPI
                 options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection"));
             });
             
-            services.AddIdentity<User, IdentityRole>(options => options.User.RequireUniqueEmail = true)
-                .AddEntityFrameworkStores<ShopProjectContext>();
+            services.AddIdentity<User, IdentityRole>(opts =>
+                {
+                    opts.User.RequireUniqueEmail = true;
+                    opts.User.AllowedUserNameCharacters = ".@abcdefghijklmnopqrstuvwxyz";
+                    
+                    opts.Password.RequiredLength = 5;
+                    opts.Password.RequireNonAlphanumeric = false;
+                    opts.Password.RequireLowercase = false;
+                    opts.Password.RequireUppercase = false;
+                    opts.Password.RequireDigit = false; 
+                })
+                .AddEntityFrameworkStores<ShopProjectContext>().AddRoles<IdentityRole>();
+            
+            
             
             
             
