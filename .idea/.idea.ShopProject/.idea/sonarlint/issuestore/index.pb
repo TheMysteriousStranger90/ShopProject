@@ -27,8 +27,6 @@ I
 DAL/Entities/OrderItem.cs,2\0\20f39b7b5f84273033380e5772a0e0467976613e
 E
 DAL/Entities/Order.cs,4\f\4f4a948237d2e9125086a3766ea70a0c1ea645b8
-G
-DAL/Entities/Address.cs,c\9\c9e3526a5dccc172d3bdbd3ab441c1b68714430f
 `
 0DAL/Configurations/DeliveryMethodConiguration.cs,f\7\f77fa1ce7b8f64ea6904aa86a55fd3cf28500ad6
 X
@@ -41,16 +39,10 @@ Q
 !DAL/Entities/Enums/OrderStatus.cs,c\f\cfc8e6451f872b8f46c6b9c81c93bd3a79ae1fbc
 Z
 *DAL/Configurations/ProductConfiguration.cs,3\e\3e1ddd94526b5ce68b7773149f081c7fcbef8ed5
-D
-DAL/Entities/User.cs,5\a\5a5e094cb4fb5c538afdbdc37bac769c6d03f905
 K
 DAL/Entities/ProductType.cs,6\3\632cd0b4640c54a16f709ca2a651779b0a2b28b0
 N
 DAL/Entities/DeliveryMethod.cs,5\e\5eac0e50d4d462915ede631ecbb6b23369c3f27e
-Z
-*ShopProjectWebAPI/ShopProjectWebAPI.csproj,c\e\ce533147997d53da83e6002c9c53ee76f6be9873
-_
-/DAL/Entities/OrderAggregate/AddressAggregate.cs,3\b\3b9173db9872a24ac539cdb0a23eca3c13340c97
 a
 1DAL/Migrations/ShopProjectContextModelSnapshot.cs,9\a\9ae9711461647cb8a030e4a7a49d1cff0c2ff451
 g
