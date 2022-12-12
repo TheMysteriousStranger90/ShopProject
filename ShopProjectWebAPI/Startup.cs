@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using DAL;
 using DAL.Context;
 using DAL.Entities;
 using DAL.Interfaces;
@@ -51,6 +52,17 @@ namespace ShopProjectWebAPI
                     opts.Password.RequireDigit = false; 
                 })
                 .AddEntityFrameworkStores<ShopProjectContext>().AddRoles<IdentityRole>();
+            
+            
+            
+            services.AddScoped<IUnitOfWork, UnitOfWork>();
+            services.AddScoped<IProductRepository, ProductRepository>();
+            services.AddScoped<IBasketRepository, BasketRepository>();
+            services.AddScoped(typeof(IRepository<>), (typeof(Repository<>)));
+            services.Configure<ApiBehaviorOptions>(options =>
+            {
+
+            });
             
             
             

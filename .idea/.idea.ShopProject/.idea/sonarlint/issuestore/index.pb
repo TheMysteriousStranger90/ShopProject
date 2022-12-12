@@ -41,8 +41,6 @@ Q
 !DAL/Entities/Enums/OrderStatus.cs,c\f\cfc8e6451f872b8f46c6b9c81c93bd3a79ae1fbc
 Z
 *DAL/Configurations/ProductConfiguration.cs,3\e\3e1ddd94526b5ce68b7773149f081c7fcbef8ed5
-J
-DAL/Entities/BaseEntity.cs,8\6\86dc7ca9cc13a45737b8b6723bb0bb7255762fb3
 D
 DAL/Entities/User.cs,5\a\5a5e094cb4fb5c538afdbdc37bac769c6d03f905
 K
