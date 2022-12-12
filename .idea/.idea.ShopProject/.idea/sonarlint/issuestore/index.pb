@@ -61,3 +61,5 @@ g
 7DAL/Migrations/20221209104522_InitialCreate.Designer.cs,3\6\3645df89a1ba7d4c782eb872da4728f0ab147b7d
 ^
 .DAL/Migrations/20221209104522_InitialCreate.cs,9\e\9e05c74efd307a3103e6a79c15398e446c732eaa
+O
+DAL/SeedData/SeedInitializer.cs,c\a\ca102a98c738ce6834e94c45e5e7ab55dd4dd9b8
