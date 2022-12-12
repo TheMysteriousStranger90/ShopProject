@@ -25,8 +25,6 @@ G
 DAL/Entities/Product.cs,1\1\11deaf58b4d7811e09581dfd5688fbb8dceba33a
 I
 DAL/Entities/OrderItem.cs,2\0\20f39b7b5f84273033380e5772a0e0467976613e
-N
-DAL/Entities/CustomerBasket.cs,8\b\8bd2767fafbf99537f98a2aac840bd17431ae858
 E
 DAL/Entities/Order.cs,4\f\4f4a948237d2e9125086a3766ea70a0c1ea645b8
 G
