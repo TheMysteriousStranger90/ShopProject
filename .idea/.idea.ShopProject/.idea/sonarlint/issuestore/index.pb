@@ -99,3 +99,25 @@ D
 BLL/DTO/SignUpDto.cs,9\e\9ef3619e2a5dfffbd48f903e1c2b6d78ad349aae
 H
 BLL/DTO/BasketItemDto.cs,0\a\0aca2bbac15c9d1a21d563cb54a0573bd3847785
+P
+ BLL/Mapping/AutomapperProfile.cs,5\e\5ebb10e5ced1a66e7340709b3d69c9fde4a00c8d
+A
+DAL/UnitOfWork.cs,f\e\feb7f407c5c6b4029fff04b909732ab442a0ac24
+R
+"ShopProjectWebAPI/appsettings.json,2\2\22922d376b8f9786a6a7d441f7249d4febe9fb41
+^
+.ShopProjectWebAPI/appsettings.Development.json,8\c\8cd203ea7f21734847affc768aeb37b19ee62139
+S
+#BLL/Helpers/OrderItemUrlResolver.cs,2\5\256a88de817088a188b584c950db69e2544a34b0
+S
+#BLL/Exceptions/RegisterException.cs,a\6\a6e3e1932d5179d645c864731783f65304e3da95
+W
+'BLL/Interfaces/IResponseCacheService.cs,4\b\4bb575b4d37cbace735785a4bfda68ab0ce7da29
+O
+BLL/Interfaces/IOrderService.cs,9\a\9aa8b75494c12be17bab5dc8a917ac11a70d3c6c
+Q
+!BLL/Interfaces/IPaymentService.cs,4\d\4d31a886dcb3f9c558ac23d00a7ca6988d171089
+O
+BLL/Interfaces/ITokenService.cs,d\c\dc361e6f60b5baefbfcccb80209ab1ce418a7ef7
+W
+'BLL/Exceptions/AccessDeniedException.cs,7\3\736512c4644f305c24070fce58adb518c92c859b

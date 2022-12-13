@@ -19,6 +19,8 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi.Models;
+using ShopProjectWebAPI.Errors;
+using ShopProjectWebAPI.Extensions;
 using ShopProjectWebAPI.Middleware;
 
 namespace ShopProjectWebAPI
@@ -63,18 +65,30 @@ namespace ShopProjectWebAPI
             services.AddScoped(typeof(IRepository<>), (typeof(Repository<>)));
             services.Configure<ApiBehaviorOptions>(options =>
             {
+                options.InvalidModelStateResponseFactory = actionContext => 
+                {
+                    var errors = actionContext.ModelState
+                        .Where(e => e.Value.Errors.Count > 0)
+                        .SelectMany(x => x.Value.Errors)
+                        .Select(x => x.ErrorMessage).ToArray();
+                    
+                    var errorResponse = new ApiValidationErrorResponse
+                    {
+                        Errors = errors
+                    };
 
+                    return new BadRequestObjectResult(errorResponse);
+                };
             });
             
             
             
             services.AddAutoMapper(typeof(AutomapperProfile));
             
+            services.AddSwaggerSettings(Configuration);
+            
             services.AddControllers();
-            services.AddSwaggerGen(c =>
-            {
-                c.SwaggerDoc("v1", new OpenApiInfo { Title = "ShopProjectWebAPI", Version = "v1" });
-            });
+            
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -82,11 +96,8 @@ namespace ShopProjectWebAPI
         {
             app.UseMiddleware<ExceptionMiddleware>();
             
-            if (env.IsDevelopment())
-            {
-                app.UseSwagger();
-                app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "ShopProjectWebAPI v1"));
-            }
+            app.UseSwagger();
+            app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "ShopProjectWebAPI v1"));
             
             app.UseStatusCodePagesWithReExecute("/errors/{0}");
 
