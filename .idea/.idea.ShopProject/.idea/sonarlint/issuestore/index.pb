@@ -101,18 +101,12 @@ R
 .ShopProjectWebAPI/appsettings.Development.json,8\c\8cd203ea7f21734847affc768aeb37b19ee62139
 S
 #BLL/Helpers/OrderItemUrlResolver.cs,2\5\256a88de817088a188b584c950db69e2544a34b0
-S
-#BLL/Exceptions/RegisterException.cs,a\6\a6e3e1932d5179d645c864731783f65304e3da95
 W
 'BLL/Interfaces/IResponseCacheService.cs,4\b\4bb575b4d37cbace735785a4bfda68ab0ce7da29
 O
 BLL/Interfaces/IOrderService.cs,9\a\9aa8b75494c12be17bab5dc8a917ac11a70d3c6c
 Q
 !BLL/Interfaces/IPaymentService.cs,4\d\4d31a886dcb3f9c558ac23d00a7ca6988d171089
-O
-BLL/Interfaces/ITokenService.cs,d\c\dc361e6f60b5baefbfcccb80209ab1ce418a7ef7
-W
-'BLL/Exceptions/AccessDeniedException.cs,7\3\736512c4644f305c24070fce58adb518c92c859b
 b
 2ShopProjectWebAPI/Controllers/BaseApiController.cs,2\5\257b43f2bfc2cc25221ea15eaa1e3a8551c5fb57
 `
@@ -121,9 +115,5 @@ b
 0ShopProjectWebAPI/Controllers/ErrorController.cs,8\1\8193060b222a867951c43d9935ac1c0fcbfdb704
 B
 BLL/DTO/UserDto.cs,5\8\58e28e0eaade22ffd7cfe8a02d9bf9eaa824d46f
-V
-&BLL/Exceptions/ShopProjectException.cs,7\6\7693617a10def276b773a5fd7cc06559e45a109f
-L
-ShopProjectWebAPI/Program.cs,8\c\8c0684e5b5a0f0c9fd4be312bead553d323382ec
 c
 3ShopProjectWebAPI/Middleware/ExceptionMiddleware.cs,4\7\47002ad659f1a909c7fd121c32db17657b0e2762
