@@ -14,7 +14,7 @@ namespace DAL.Repositories
         private readonly ShopProjectContext _context;
         private readonly DbSet<T> _set;
 
-        protected Repository(ShopProjectContext context)
+        public Repository(ShopProjectContext context)
         {
             _context = context;
             _set = _context.Set<T>();

@@ -59,18 +59,12 @@ N
 DAL/Entities/CustomerBasket.cs,8\b\8bd2767fafbf99537f98a2aac840bd17431ae858
 Q
 !DAL/Context/ShopProjectContext.cs,6\8\6887afd1634f7e398e52ba90412a99ada4d59272
-m
-=DAL/Specifications/ProductsWithTypesAndBrandsSpecification.cs,c\8\c8b0efc21bd8de1de09db94bf54822755e7e88a8
 T
 $DAL/Repositories/BasketRepository.cs,9\f\9f7b5fc3b5914be3cbbd9bd2239545990278d3df
-\
-,DAL/Specifications/SpecificationEvaluator.cs,0\d\0ddf95accae652f6eb6d481a68b374c1533f562b
 J
 DAL/Entities/BaseEntity.cs,8\6\86dc7ca9cc13a45737b8b6723bb0bb7255762fb3
 M
 DAL/Interfaces/IRepository.cs,3\8\38526699bc8e0525f029605d4ff42db845ed3537
-N
-DAL/Repositories/Repository.cs,c\7\c7cbba72e87a2f3648ad1b9678cae1a4e020d688
 D
 DAL/Entities/User.cs,5\a\5a5e094cb4fb5c538afdbdc37bac769c6d03f905
 G
@@ -79,8 +73,6 @@ _
 /DAL/Entities/OrderAggregate/AddressAggregate.cs,3\b\3b9173db9872a24ac539cdb0a23eca3c13340c97
 E
 BLL/DTO/AddressDto.cs,d\6\d62dd5e761b8bf89429c64bf9bb04dcb5f17d979
-B
-BLL/DTO/UserDto.cs,5\8\58e28e0eaade22ffd7cfe8a02d9bf9eaa824d46f
 G
 BLL/DTO/OrderItemDto.cs,3\7\37b5bff8b6f2a3faff8ba22296ced80bdd230512
 K
@@ -121,3 +113,17 @@ O
 BLL/Interfaces/ITokenService.cs,d\c\dc361e6f60b5baefbfcccb80209ab1ce418a7ef7
 W
 'BLL/Exceptions/AccessDeniedException.cs,7\3\736512c4644f305c24070fce58adb518c92c859b
+b
+2ShopProjectWebAPI/Controllers/BaseApiController.cs,2\5\257b43f2bfc2cc25221ea15eaa1e3a8551c5fb57
+`
+0ShopProjectWebAPI/Properties/launchSettings.json,e\6\e6b0ea33b7d32669f286600d381f9a056209b045
+`
+0ShopProjectWebAPI/Controllers/ErrorController.cs,8\1\8193060b222a867951c43d9935ac1c0fcbfdb704
+B
+BLL/DTO/UserDto.cs,5\8\58e28e0eaade22ffd7cfe8a02d9bf9eaa824d46f
+V
+&BLL/Exceptions/ShopProjectException.cs,7\6\7693617a10def276b773a5fd7cc06559e45a109f
+L
+ShopProjectWebAPI/Program.cs,8\c\8c0684e5b5a0f0c9fd4be312bead553d323382ec
+c
+3ShopProjectWebAPI/Middleware/ExceptionMiddleware.cs,4\7\47002ad659f1a909c7fd121c32db17657b0e2762
