@@ -51,8 +51,6 @@ P
  DAL/Interfaces/ISpecification.cs,a\b\ab0d311c7414c5460632aca7435631d582369336
 T
 $DAL/Interfaces/IProductRepository.cs,e\2\e229416bb3c56f4358062606c8c06d609d3f7b5a
-W
-'DAL/Specifications/BaseSpecification.cs,e\7\e73eb33cff0d9a34772f4c2fc4050197c39dfa8d
 U
 %DAL/Repositories/ProductRepository.cs,4\0\40509823e5c0ffc40299bec437e153caff5faf2e
 N
