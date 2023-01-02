@@ -116,12 +116,17 @@ namespace ShopProjectWebAPI
             
             app.UseStatusCodePagesWithReExecute("/errors/{0}");
 
-            app.UseHttpsRedirection();
+            //app.UseHttpsRedirection();
 
             app.UseRouting();
             app.UseStaticFiles();
 
-            app.UseCors("CorsPolicy");
+            app.UseCors(x => x
+                .AllowAnyOrigin()
+                .AllowAnyMethod()
+                .AllowAnyHeader());
+
+            app.UseHttpsRedirection();
 
             app.UseAuthorization();
 
