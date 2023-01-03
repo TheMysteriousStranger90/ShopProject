@@ -69,8 +69,6 @@ O
 BLL/Interfaces/IOrderService.cs,9\a\9aa8b75494c12be17bab5dc8a917ac11a70d3c6c
 Q
 !BLL/Interfaces/IPaymentService.cs,4\d\4d31a886dcb3f9c558ac23d00a7ca6988d171089
-`
-0ShopProjectWebAPI/Controllers/ErrorController.cs,8\1\8193060b222a867951c43d9935ac1c0fcbfdb704
 B
 BLL/DTO/UserDto.cs,5\8\58e28e0eaade22ffd7cfe8a02d9bf9eaa824d46f
 c
@@ -147,8 +145,6 @@ Q
 !DAL/Context/ShopProjectContext.cs,6\8\6887afd1634f7e398e52ba90412a99ada4d59272
 b
 2ShopProjectWebAPI/Controllers/BaseApiController.cs,2\5\257b43f2bfc2cc25221ea15eaa1e3a8551c5fb57
-c
-3ShopProjectWebAPI/Controllers/ProductsController.cs,8\d\8d47bced1958a498f76dfd478de6d7341b656a33
 `
 0ShopProjectWebAPI/Properties/launchSettings.json,e\6\e6b0ea33b7d32669f286600d381f9a056209b045
 ^
