@@ -157,3 +157,5 @@ R
 "ShopProjectWebAPI/appsettings.json,2\2\22922d376b8f9786a6a7d441f7249d4febe9fb41
 L
 ShopProjectWebAPI/Program.cs,8\c\8c0684e5b5a0f0c9fd4be312bead553d323382ec
+?
+ShopProject.sln,3\9\3992a4cd70e6e5f36c565d42f8b8438ddc19508d

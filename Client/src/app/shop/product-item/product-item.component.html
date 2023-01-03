@@ -3,18 +3,18 @@
   <div class="image position-relative" style="cursor: pointer;">
     <img src="{{product.pictureUrl}}" alt="{{product.name}}" class="img-fluid bg-info">
     <div class="d-flex align-items-center justify-content-center hover-overlay">
-      <button   class="btn btn-primary fa fa-shopping-cart me-2"></button>
-      <button   class="btn btn-primary">View</button>
+      <button   class="btn btn-secondary bi bi-cart4 me-2" style="background-color: #9f7aea; color: #212121;"></button>
+      <button routerLink="/shop/{{product.id}}" class="btn btn-secondary" style="background-color: #9f7aea; color: #212121;">View</button>
     </div>
   </div>
 
 
   <div class="card-body d-flex flex-column">
-    <a href="" class="text-decoration-none">
-      <h6 class="text-uppercase">
+    <a routerLink="/shop/{{product.id}}" class="text-decoration-none">
+      <h6 class="text-uppercase" style="color: #ffffff;">
         {{product.name}}
       </h6>
     </a>
-    <span class="mb-2">{{product.price | currency}}</span>
+    <span class="mb-2" style="color: #ffffff;">{{product.price | currency}}</span>
   </div>
 </div>

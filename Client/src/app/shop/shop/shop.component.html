@@ -1,25 +1,25 @@
 <div class="container">
   <div class="row" *ngIf="types.length > 0 && brands.length > 0">
     <section class="col-3">
-      <h5 class="text-warning ms-3">Sort</h5>
-      <select class="form-select mb-4" (change)="onSortSelected($event)">
+      <h5 class="text ms-3" style="color: #9f7aea;">SORT</h5>
+      <select class="form-select mb-4" style="color: #9f7aea; background-color: #3a3a3a" (change)="onSortSelected($event)">
         <option *ngFor="let sort of sortOptions" [value]="sort.value">
           {{sort.name}}
         </option>
       </select>
 
 
-      <h5 class="text-warning ms-3">Brands</h5>
-      <ul class="list-group my-3">
-        <li class="list-group-item"
+      <h5 class="text ms-3" style="color: #9f7aea;">BRANDS</h5>
+      <ul class="list-group my-3" >
+        <li class="list-group-item" style="color: #9f7aea; background-color: #3a3a3a"
             *ngFor="let brand of brands"
             [class.active]="brand.id === shopParams.brandId"
             [value]="brand.id"
             (click)="onBrandSelected(brand.id)">{{brand.name}}</li>
       </ul>
-      <h5 class="text-warning ms-3">Types</h5>
+      <h5 class="text ms-3" style="color: #9f7aea;">TYPES</h5>
       <ul class="list-group my-3">
-        <li class="list-group-item"
+        <li class="list-group-item" style="color: #9f7aea; background-color: #3a3a3a"
             *ngFor="let type of types"
             [class.active]="type.id === shopParams.typeId"
             [value]="type.id"
@@ -28,7 +28,7 @@
 
     </section>
     <section class="col-9">
-      <div class="d-flex justify-content-between align-items-center pb-2">
+      <div class="d-flex justify-content-between align-items-center pb-2" style="color: #ffffff;">
         <app-paging-header
           [totalCount]="totalCount"
           [pageNumber]="shopParams.pageNumber"
@@ -37,8 +37,8 @@
 
         <div class="d-flex mt-2">
           <input (keyup.enter)="onSearch()" type="text" placeholder="Search" class="form-control me-2" #search>
-          <button (click)="onSearch()" class="btn btn-outline-primary mx-2">Search</button>
-          <button (click)="onReset()" class="btn btn-outline-success">Reset</button>
+          <button (click)="onSearch()" class="btn btn-secondary mx-2" style="background-color: #9f7aea; color: #212121; font-family: 'Berlin Sans FB'">Search</button>
+          <button (click)="onReset()" class="btn btn-secondary" style="background-color: #9f7aea; color: #212121; font-family: 'Berlin Sans FB'">Reset</button>
         </div>
       </div>
 
@@ -48,7 +48,7 @@
         </div>
       </div>
 
-      <div class="d-flex justify-content-center" *ngIf="totalCount > 0">
+      <div class="d-flex justify-content-center" *ngIf="totalCount > 0" >
         <app-pager
           [totalCount]="totalCount"
           [pageSize]="shopParams.pageSize"

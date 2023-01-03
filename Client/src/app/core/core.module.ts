@@ -13,7 +13,8 @@ import { RouterModule } from '@angular/router';
     NavBarComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    RouterModule
   ],
   exports: [
     NavBarComponent
