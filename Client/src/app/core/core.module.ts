@@ -6,15 +6,25 @@ import { NgxSpinnerModule } from 'ngx-spinner';
 import { BreadcrumbModule } from 'xng-breadcrumb'
 import { ToastrModule } from 'ngx-toastr';
 import { RouterModule } from '@angular/router';
+import { TestErrorComponent } from './test-error/test-error.component';
+import { NotFoundComponent } from './not-found/not-found.component';
+import { ServerErrorComponent } from './server-error/server-error.component';
 
 
 @NgModule({
   declarations: [
-    NavBarComponent
+    NavBarComponent,
+    TestErrorComponent,
+    NotFoundComponent,
+    ServerErrorComponent
   ],
   imports: [
     CommonModule,
-    RouterModule
+    RouterModule,
+    ToastrModule.forRoot(
+      { positionClass: 'toast-bottom-right',
+        preventDuplicates: true}
+    )
   ],
   exports: [
     NavBarComponent

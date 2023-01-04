@@ -27,12 +27,8 @@ g
 .DAL/Migrations/20221209104522_InitialCreate.cs,9\e\9e05c74efd307a3103e6a79c15398e446c732eaa
 P
  DAL/Interfaces/ISpecification.cs,a\b\ab0d311c7414c5460632aca7435631d582369336
-U
-%DAL/Repositories/ProductRepository.cs,4\0\40509823e5c0ffc40299bec437e153caff5faf2e
 N
 DAL/Entities/CustomerBasket.cs,8\b\8bd2767fafbf99537f98a2aac840bd17431ae858
-T
-$DAL/Repositories/BasketRepository.cs,9\f\9f7b5fc3b5914be3cbbd9bd2239545990278d3df
 G
 DAL/Entities/Address.cs,c\9\c9e3526a5dccc172d3bdbd3ab441c1b68714430f
 _
@@ -59,20 +55,10 @@ H
 BLL/DTO/BasketItemDto.cs,0\a\0aca2bbac15c9d1a21d563cb54a0573bd3847785
 P
  BLL/Mapping/AutomapperProfile.cs,5\e\5ebb10e5ced1a66e7340709b3d69c9fde4a00c8d
-A
-DAL/UnitOfWork.cs,f\e\feb7f407c5c6b4029fff04b909732ab442a0ac24
 S
 #BLL/Helpers/OrderItemUrlResolver.cs,2\5\256a88de817088a188b584c950db69e2544a34b0
-W
-'BLL/Interfaces/IResponseCacheService.cs,4\b\4bb575b4d37cbace735785a4bfda68ab0ce7da29
-O
-BLL/Interfaces/IOrderService.cs,9\a\9aa8b75494c12be17bab5dc8a917ac11a70d3c6c
-Q
-!BLL/Interfaces/IPaymentService.cs,4\d\4d31a886dcb3f9c558ac23d00a7ca6988d171089
 B
 BLL/DTO/UserDto.cs,5\8\58e28e0eaade22ffd7cfe8a02d9bf9eaa824d46f
-c
-3ShopProjectWebAPI/Middleware/ExceptionMiddleware.cs,4\7\47002ad659f1a909c7fd121c32db17657b0e2762
 \
 ,DAL/Specifications/SpecificationEvaluator.cs,0\d\0ddf95accae652f6eb6d481a68b374c1533f562b
 W
@@ -87,10 +73,6 @@ o
 ?DAL/Specifications/ProductWithFiltersForCountSpecificication.cs,2\0\20c44f6baac361f1a846e14cf2e9eee2b56f347a
 `
 0ShopProjectWebAPI/Controllers/UsersController.cs,5\7\577d086c8654c4217f43f204ba977bbfc4694877
-N
-BLL/Interfaces/IUserService.cs,3\d\3d4a76cf4c7f82ba65bb6cff63493364c56964c0
-K
-BLL/Services/UserService.cs,3\1\319ba5d6cf5f916390768b498a3a220c590d3989
 N
 DAL/Repositories/Repository.cs,c\7\c7cbba72e87a2f3648ad1b9678cae1a4e020d688
 d
@@ -107,8 +89,6 @@ S
 #BLL/Exceptions/RegisterException.cs,a\6\a6e3e1932d5179d645c864731783f65304e3da95
 V
 &BLL/Exceptions/ShopProjectException.cs,7\6\7693617a10def276b773a5fd7cc06559e45a109f
-O
-BLL/Interfaces/ITokenService.cs,d\c\dc361e6f60b5baefbfcccb80209ab1ce418a7ef7
 W
 'DAL/Specifications/BaseSpecification.cs,e\7\e73eb33cff0d9a34772f4c2fc4050197c39dfa8d
 J
@@ -155,3 +135,9 @@ L
 ShopProjectWebAPI/Program.cs,8\c\8c0684e5b5a0f0c9fd4be312bead553d323382ec
 ?
 ShopProject.sln,3\9\3992a4cd70e6e5f36c565d42f8b8438ddc19508d
+L
+ShopProjectWebAPI/Startup.cs,b\1\b1530fd7f3711a22189fa3e1a834900243e6685d
+`
+0ShopProjectWebAPI/Controllers/ErrorController.cs,8\1\8193060b222a867951c43d9935ac1c0fcbfdb704
+c
+3ShopProjectWebAPI/Controllers/ProductsController.cs,8\d\8d47bced1958a498f76dfd478de6d7341b656a33
