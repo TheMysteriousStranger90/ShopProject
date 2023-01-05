@@ -25,8 +25,6 @@ g
 7DAL/Migrations/20221209104522_InitialCreate.Designer.cs,3\6\3645df89a1ba7d4c782eb872da4728f0ab147b7d
 ^
 .DAL/Migrations/20221209104522_InitialCreate.cs,9\e\9e05c74efd307a3103e6a79c15398e446c732eaa
-P
- DAL/Interfaces/ISpecification.cs,a\b\ab0d311c7414c5460632aca7435631d582369336
 N
 DAL/Entities/CustomerBasket.cs,8\b\8bd2767fafbf99537f98a2aac840bd17431ae858
 G
@@ -73,8 +71,6 @@ o
 ?DAL/Specifications/ProductWithFiltersForCountSpecificication.cs,2\0\20c44f6baac361f1a846e14cf2e9eee2b56f347a
 `
 0ShopProjectWebAPI/Controllers/UsersController.cs,5\7\577d086c8654c4217f43f204ba977bbfc4694877
-N
-DAL/Repositories/Repository.cs,c\7\c7cbba72e87a2f3648ad1b9678cae1a4e020d688
 d
 4ShopProjectWebAPI/Extensions/SwaggerConfiguration.cs,3\8\388da13a90732f09bdcfbc7929969544d107c5d5
 F
@@ -111,8 +107,6 @@ S
 #DAL/Interfaces/IBasketRepository.cs,5\4\54c37c64d75fa4230dc26118ef937e7b6d46afa6
 Z
 *ShopProjectWebAPI/ShopProjectWebAPI.csproj,c\e\ce533147997d53da83e6002c9c53ee76f6be9873
-O
-DAL/SeedData/SeedInitializer.cs,c\a\ca102a98c738ce6834e94c45e5e7ab55dd4dd9b8
 W
 'DAL/Configurations/UserConfiguration.cs,f\d\fdaeb566e53ad772bf7ed45e559ac96c8f4ef8de
 Z
@@ -121,8 +115,6 @@ Z
 ,DAL/Configurations/OrderItemConfiguration.cs,c\5\c5f1e0cad98e1451cd8e28b7eec53dd1a5d86081
 X
 (DAL/Configurations/OrderConfiguration.cs,c\c\cc88935a18fbbacba3f2b92421192c22c7ff31f4
-Q
-!DAL/Context/ShopProjectContext.cs,6\8\6887afd1634f7e398e52ba90412a99ada4d59272
 b
 2ShopProjectWebAPI/Controllers/BaseApiController.cs,2\5\257b43f2bfc2cc25221ea15eaa1e3a8551c5fb57
 `
@@ -131,8 +123,6 @@ b
 .ShopProjectWebAPI/appsettings.Development.json,8\c\8cd203ea7f21734847affc768aeb37b19ee62139
 R
 "ShopProjectWebAPI/appsettings.json,2\2\22922d376b8f9786a6a7d441f7249d4febe9fb41
-L
-ShopProjectWebAPI/Program.cs,8\c\8c0684e5b5a0f0c9fd4be312bead553d323382ec
 ?
 ShopProject.sln,3\9\3992a4cd70e6e5f36c565d42f8b8438ddc19508d
 L
@@ -141,3 +131,21 @@ L
 0ShopProjectWebAPI/Controllers/ErrorController.cs,8\1\8193060b222a867951c43d9935ac1c0fcbfdb704
 c
 3ShopProjectWebAPI/Controllers/ProductsController.cs,8\d\8d47bced1958a498f76dfd478de6d7341b656a33
+N
+BLL/Interfaces/IUserService.cs,3\d\3d4a76cf4c7f82ba65bb6cff63493364c56964c0
+O
+BLL/Interfaces/ITokenService.cs,d\c\dc361e6f60b5baefbfcccb80209ab1ce418a7ef7
+W
+'BLL/Interfaces/IResponseCacheService.cs,4\b\4bb575b4d37cbace735785a4bfda68ab0ce7da29
+Q
+!BLL/Interfaces/IPaymentService.cs,4\d\4d31a886dcb3f9c558ac23d00a7ca6988d171089
+O
+BLL/Interfaces/IOrderService.cs,9\a\9aa8b75494c12be17bab5dc8a917ac11a70d3c6c
+A
+DAL/UnitOfWork.cs,f\e\feb7f407c5c6b4029fff04b909732ab442a0ac24
+c
+3ShopProjectWebAPI/Middleware/ExceptionMiddleware.cs,4\7\47002ad659f1a909c7fd121c32db17657b0e2762
+K
+BLL/Services/UserService.cs,3\1\319ba5d6cf5f916390768b498a3a220c590d3989
+`
+0ShopProjectWebAPI/Controllers/BuggyController.cs,e\5\e5211bc49ae2b0e60f98608c9ffcc02e1bf8c52e

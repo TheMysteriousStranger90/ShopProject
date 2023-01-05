@@ -6,6 +6,8 @@ import { PagingHeaderComponent } from './components/paging-header/paging-header.
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import {PaginationModule} from 'ngx-bootstrap/pagination';
 
+import { CarouselModule } from 'ngx-bootstrap/carousel';
+
 
 
 @NgModule({
@@ -16,10 +18,12 @@ import {PaginationModule} from 'ngx-bootstrap/pagination';
   imports: [
     CommonModule,
     PaginationModule.forRoot(),
+    CarouselModule.forRoot(),
     ReactiveFormsModule,
     FormsModule,
   ],
   exports: [
+    CarouselModule,
     PaginationModule,
     PagingHeaderComponent,
     PagerComponent,
