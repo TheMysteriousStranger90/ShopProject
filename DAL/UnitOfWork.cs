@@ -26,10 +26,10 @@ namespace DAL
             throw new System.NotImplementedException();
         }
         
-        private IBasketRepository _basketRepository;
+        //private IBasketRepository _basketRepository;
         private IProductRepository _productRepository;
         
-        public IBasketRepository BasketRepository => _basketRepository ??= new BasketRepository(_context);
+        //public IBasketRepository BasketRepository => _basketRepository ??= new BasketRepository(_context);
         public IProductRepository ProductRepository => _productRepository ??= new ProductRepository(_context);
         
         

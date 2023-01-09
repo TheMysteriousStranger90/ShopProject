@@ -1,32 +1,42 @@
-﻿using System.Threading.Tasks;
+﻿using System;
+using System.Text.Json;
+using System.Threading.Tasks;
 using DAL.Context;
 using DAL.Entities;
 using DAL.Interfaces;
+using StackExchange.Redis;
 
 namespace DAL.Repositories
 {
     public class BasketRepository : IBasketRepository
     {
-        private readonly ShopProjectContext _context;
+        private readonly IDatabase _database;
         
-        public BasketRepository(ShopProjectContext context)
+        public BasketRepository(IConnectionMultiplexer redis)
         {
-            _context = context;
+            _database = redis.GetDatabase();
         }
         
-        public Task<CustomerBasket> GetBasketAsync(string basketId)
+        public async Task<CustomerBasket> GetBasketAsync(string basketId)
         {
-            throw new System.NotImplementedException();
+            var data = await _database.StringGetAsync(basketId);
+
+            return data.IsNullOrEmpty ? null : JsonSerializer.Deserialize<CustomerBasket>(data);
         }
 
-        public Task<CustomerBasket> UpdateBasketAsync(CustomerBasket basket)
+        public async Task<CustomerBasket> UpdateBasketAsync(CustomerBasket basket)
         {
-            throw new System.NotImplementedException();
+            var created = await _database.StringSetAsync(basket.Id, JsonSerializer.Serialize(basket),
+                TimeSpan.FromDays(30));
+
+            if (!created) return null;
+
+            return await GetBasketAsync(basket.Id);
         }
 
-        public Task<bool> DeleteBasketAsync(string basketId)
+        public async Task<bool> DeleteBasketAsync(string basketId)
         {
-            throw new System.NotImplementedException();
+            return await _database.KeyDeleteAsync(basketId);
         }
     }
 }

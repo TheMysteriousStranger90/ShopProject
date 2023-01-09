@@ -23,6 +23,7 @@ using Microsoft.OpenApi.Models;
 using ShopProjectWebAPI.Errors;
 using ShopProjectWebAPI.Extensions;
 using ShopProjectWebAPI.Middleware;
+using StackExchange.Redis;
 
 namespace ShopProjectWebAPI
 {
@@ -43,6 +44,12 @@ namespace ShopProjectWebAPI
             services.AddDbContext<ShopProjectContext>(options =>
             {
                 options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection"));
+            });
+
+            services.AddSingleton<IConnectionMultiplexer>(c =>
+            {
+                var config = ConfigurationOptions.Parse(Configuration.GetConnectionString("Redis"), true);
+                return ConnectionMultiplexer.Connect(config);
             });
             
             services.AddIdentity<User, IdentityRole>(opts =>
