@@ -141,3 +141,27 @@ L
 ShopProjectWebAPI/Program.cs,8\c\8c0684e5b5a0f0c9fd4be312bead553d323382ec
 N
 DAL/Repositories/Repository.cs,c\7\c7cbba72e87a2f3648ad1b9678cae1a4e020d688
+>
+BLL/BLL.csproj,e\0\e0f4552e00511decec5f0d8b0bbde386377409da
+A
+DAL/UnitOfWork.cs,f\e\feb7f407c5c6b4029fff04b909732ab442a0ac24
+>
+DAL/DAL.csproj,d\8\d86dd49581f2123b337954982c26d5b73551acad
+R
+"ShopProjectWebAPI/appsettings.json,2\2\22922d376b8f9786a6a7d441f7249d4febe9fb41
+L
+ShopProjectWebAPI/Startup.cs,b\1\b1530fd7f3711a22189fa3e1a834900243e6685d
+M
+DAL/Interfaces/IUnitOfWork.cs,0\f\0f4ef9f6b16e95f2d1fed669290bd948a2b71bf8
+^
+.ShopProjectWebAPI/appsettings.Development.json,8\c\8cd203ea7f21734847affc768aeb37b19ee62139
+N
+DAL/Entities/CustomerBasket.cs,8\b\8bd2767fafbf99537f98a2aac840bd17431ae858
+J
+DAL/Entities/BasketItem.cs,d\2\d2cc64a1fd7a112d929c2ea4a3da74720f90e6f0
+T
+$DAL/Repositories/BasketRepository.cs,9\f\9f7b5fc3b5914be3cbbd9bd2239545990278d3df
+a
+1ShopProjectWebAPI/Controllers/BasketController.cs,5\c\5c0303ca67b9f7f2363c6003f37aa0e29d451283
+U
+%DAL/Repositories/ProductRepository.cs,4\0\40509823e5c0ffc40299bec437e153caff5faf2e

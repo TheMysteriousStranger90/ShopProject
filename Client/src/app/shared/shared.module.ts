@@ -7,13 +7,18 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import {PaginationModule} from 'ngx-bootstrap/pagination';
 
 import { CarouselModule } from 'ngx-bootstrap/carousel';
+import { BasketSummaryComponent } from './basket-summary/basket-summary.component';
+import {RouterModule} from '@angular/router';
+import { OrderTotalsComponent } from './order-totals/order-totals.component';
 
 
 
 @NgModule({
   declarations: [
     PagerComponent,
-    PagingHeaderComponent
+    PagingHeaderComponent,
+    BasketSummaryComponent,
+    OrderTotalsComponent
   ],
   imports: [
     CommonModule,
@@ -21,6 +26,7 @@ import { CarouselModule } from 'ngx-bootstrap/carousel';
     CarouselModule.forRoot(),
     ReactiveFormsModule,
     FormsModule,
+    RouterModule
   ],
   exports: [
     CarouselModule,
@@ -29,6 +35,8 @@ import { CarouselModule } from 'ngx-bootstrap/carousel';
     PagerComponent,
     ReactiveFormsModule,
     FormsModule,
+    BasketSummaryComponent,
+    OrderTotalsComponent
   ]
 })
 export class SharedModule { }
