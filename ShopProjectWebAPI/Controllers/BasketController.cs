@@ -4,6 +4,7 @@ using BLL.DTO;
 using DAL.Entities;
 using DAL.Interfaces;
 using Microsoft.AspNetCore.Mvc;
+using ShopProjectWebAPI.DTO;
 
 namespace ShopProjectWebAPI.Controllers
 {

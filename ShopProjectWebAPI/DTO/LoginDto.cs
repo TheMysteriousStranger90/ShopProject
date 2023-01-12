@@ -1,8 +1,8 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace BLL.DTO
+namespace ShopProjectWebAPI.DTO
 {
-    public class SignInDto
+    public class LoginDto
     {
         [Display(Name = "Email")]
         [Required(ErrorMessage = "Please, enter valid email address")]

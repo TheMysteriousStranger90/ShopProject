@@ -7,6 +7,7 @@ using DAL.Interfaces;
 using DAL.Specifications;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using ShopProjectWebAPI.DTO;
 using ShopProjectWebAPI.Errors;
 
 namespace ShopProjectWebAPI.Controllers

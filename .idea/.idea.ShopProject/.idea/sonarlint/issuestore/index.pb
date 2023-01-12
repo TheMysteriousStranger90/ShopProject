@@ -1,6 +1,4 @@
 
-T
-$ShopProjectWebAPI/WeatherForecast.cs,b\b\bbe5d5fb30a4fda9901d9c8d59b0cb4d5a6ae657
 R
 "DAL/Entities/ProductItemOrdered.cs,3\0\30f9a4509267e6c0e7581e5234a4940d8fa0a133
 I
@@ -21,36 +19,10 @@ g
 7DAL/Migrations/20221209104522_InitialCreate.Designer.cs,3\6\3645df89a1ba7d4c782eb872da4728f0ab147b7d
 ^
 .DAL/Migrations/20221209104522_InitialCreate.cs,9\e\9e05c74efd307a3103e6a79c15398e446c732eaa
-G
-DAL/Entities/Address.cs,c\9\c9e3526a5dccc172d3bdbd3ab441c1b68714430f
-_
-/DAL/Entities/OrderAggregate/AddressAggregate.cs,3\b\3b9173db9872a24ac539cdb0a23eca3c13340c97
-E
-BLL/DTO/AddressDto.cs,d\6\d62dd5e761b8bf89429c64bf9bb04dcb5f17d979
-G
-BLL/DTO/OrderItemDto.cs,3\7\37b5bff8b6f2a3faff8ba22296ced80bdd230512
-K
-BLL/DTO/OrderToReturnDto.cs,0\4\04b031f1f2263150339433972ab8c99b4490e391
-Q
-!BLL/Helpers/ProductUrlResolver.cs,7\7\773be6f858acc6fa479c5aff136fe51cfb50d9b2
-C
-BLL/DTO/OrderDto.cs,5\c\5cfee7e404474416c7314b9cbba36aea17a8a46b
 L
 BLL/DTO/CustomerBasketDto.cs,b\1\b13d340e3cc609a11cf55def7008f7978c3615e8
-D
-BLL/DTO/SignInDto.cs,6\a\6abbb5581b0ae328dcf69e6c9090d4e0e9e0b478
-E
-BLL/DTO/ProductDto.cs,1\f\1f105fc578f89ea9a8dba5a701a43d744536c5e3
-D
-BLL/DTO/SignUpDto.cs,9\e\9ef3619e2a5dfffbd48f903e1c2b6d78ad349aae
 H
 BLL/DTO/BasketItemDto.cs,0\a\0aca2bbac15c9d1a21d563cb54a0573bd3847785
-P
- BLL/Mapping/AutomapperProfile.cs,5\e\5ebb10e5ced1a66e7340709b3d69c9fde4a00c8d
-S
-#BLL/Helpers/OrderItemUrlResolver.cs,2\5\256a88de817088a188b584c950db69e2544a34b0
-B
-BLL/DTO/UserDto.cs,5\8\58e28e0eaade22ffd7cfe8a02d9bf9eaa824d46f
 \
 ,DAL/Specifications/SpecificationEvaluator.cs,0\d\0ddf95accae652f6eb6d481a68b374c1533f562b
 W
@@ -63,10 +35,6 @@ m
 =DAL/Specifications/ProductsWithTypesAndBrandsSpecification.cs,c\8\c8b0efc21bd8de1de09db94bf54822755e7e88a8
 o
 ?DAL/Specifications/ProductWithFiltersForCountSpecificication.cs,2\0\20c44f6baac361f1a846e14cf2e9eee2b56f347a
-`
-0ShopProjectWebAPI/Controllers/UsersController.cs,5\7\577d086c8654c4217f43f204ba977bbfc4694877
-d
-4ShopProjectWebAPI/Extensions/SwaggerConfiguration.cs,3\8\388da13a90732f09bdcfbc7929969544d107c5d5
 F
 BLL/DTO/UserRoleDto.cs,9\5\95251fa8ece84f71cdc9775e1b9ce8eaf4d9dbb7
 W
@@ -77,8 +45,6 @@ W
 'BLL/Exceptions/AccessDeniedException.cs,7\3\736512c4644f305c24070fce58adb518c92c859b
 S
 #BLL/Exceptions/RegisterException.cs,a\6\a6e3e1932d5179d645c864731783f65304e3da95
-V
-&BLL/Exceptions/ShopProjectException.cs,7\6\7693617a10def276b773a5fd7cc06559e45a109f
 W
 'DAL/Specifications/BaseSpecification.cs,e\7\e73eb33cff0d9a34772f4c2fc4050197c39dfa8d
 J
@@ -91,12 +57,8 @@ M
 DAL/Interfaces/IRepository.cs,3\8\38526699bc8e0525f029605d4ff42db845ed3537
 T
 $DAL/Interfaces/IProductRepository.cs,e\2\e229416bb3c56f4358062606c8c06d609d3f7b5a
-D
-DAL/Entities/User.cs,5\a\5a5e094cb4fb5c538afdbdc37bac769c6d03f905
 S
 #DAL/Interfaces/IBasketRepository.cs,5\4\54c37c64d75fa4230dc26118ef937e7b6d46afa6
-Z
-*ShopProjectWebAPI/ShopProjectWebAPI.csproj,c\e\ce533147997d53da83e6002c9c53ee76f6be9873
 W
 'DAL/Configurations/UserConfiguration.cs,f\d\fdaeb566e53ad772bf7ed45e559ac96c8f4ef8de
 Z
@@ -113,55 +75,47 @@ b
 ShopProject.sln,3\9\3992a4cd70e6e5f36c565d42f8b8438ddc19508d
 `
 0ShopProjectWebAPI/Controllers/ErrorController.cs,8\1\8193060b222a867951c43d9935ac1c0fcbfdb704
-c
-3ShopProjectWebAPI/Controllers/ProductsController.cs,8\d\8d47bced1958a498f76dfd478de6d7341b656a33
-N
-BLL/Interfaces/IUserService.cs,3\d\3d4a76cf4c7f82ba65bb6cff63493364c56964c0
-O
-BLL/Interfaces/ITokenService.cs,d\c\dc361e6f60b5baefbfcccb80209ab1ce418a7ef7
 W
 'BLL/Interfaces/IResponseCacheService.cs,4\b\4bb575b4d37cbace735785a4bfda68ab0ce7da29
 Q
 !BLL/Interfaces/IPaymentService.cs,4\d\4d31a886dcb3f9c558ac23d00a7ca6988d171089
-O
-BLL/Interfaces/IOrderService.cs,9\a\9aa8b75494c12be17bab5dc8a917ac11a70d3c6c
 c
 3ShopProjectWebAPI/Middleware/ExceptionMiddleware.cs,4\7\47002ad659f1a909c7fd121c32db17657b0e2762
-K
-BLL/Services/UserService.cs,3\1\319ba5d6cf5f916390768b498a3a220c590d3989
-`
-0ShopProjectWebAPI/Controllers/BuggyController.cs,e\5\e5211bc49ae2b0e60f98608c9ffcc02e1bf8c52e
-O
-DAL/SeedData/SeedInitializer.cs,c\a\ca102a98c738ce6834e94c45e5e7ab55dd4dd9b8
 P
  DAL/Interfaces/ISpecification.cs,a\b\ab0d311c7414c5460632aca7435631d582369336
-Q
-!DAL/Context/ShopProjectContext.cs,6\8\6887afd1634f7e398e52ba90412a99ada4d59272
 L
 ShopProjectWebAPI/Program.cs,8\c\8c0684e5b5a0f0c9fd4be312bead553d323382ec
 N
 DAL/Repositories/Repository.cs,c\7\c7cbba72e87a2f3648ad1b9678cae1a4e020d688
->
-BLL/BLL.csproj,e\0\e0f4552e00511decec5f0d8b0bbde386377409da
 A
 DAL/UnitOfWork.cs,f\e\feb7f407c5c6b4029fff04b909732ab442a0ac24
->
-DAL/DAL.csproj,d\8\d86dd49581f2123b337954982c26d5b73551acad
-R
-"ShopProjectWebAPI/appsettings.json,2\2\22922d376b8f9786a6a7d441f7249d4febe9fb41
-L
-ShopProjectWebAPI/Startup.cs,b\1\b1530fd7f3711a22189fa3e1a834900243e6685d
 M
 DAL/Interfaces/IUnitOfWork.cs,0\f\0f4ef9f6b16e95f2d1fed669290bd948a2b71bf8
-^
-.ShopProjectWebAPI/appsettings.Development.json,8\c\8cd203ea7f21734847affc768aeb37b19ee62139
 N
 DAL/Entities/CustomerBasket.cs,8\b\8bd2767fafbf99537f98a2aac840bd17431ae858
 J
 DAL/Entities/BasketItem.cs,d\2\d2cc64a1fd7a112d929c2ea4a3da74720f90e6f0
 T
 $DAL/Repositories/BasketRepository.cs,9\f\9f7b5fc3b5914be3cbbd9bd2239545990278d3df
-a
-1ShopProjectWebAPI/Controllers/BasketController.cs,5\c\5c0303ca67b9f7f2363c6003f37aa0e29d451283
 U
 %DAL/Repositories/ProductRepository.cs,4\0\40509823e5c0ffc40299bec437e153caff5faf2e
+Z
+*ShopProjectWebAPI/ShopProjectWebAPI.csproj,c\e\ce533147997d53da83e6002c9c53ee76f6be9873
+V
+&BLL/Exceptions/ShopProjectException.cs,7\6\7693617a10def276b773a5fd7cc06559e45a109f
+Q
+!DAL/Context/ShopProjectContext.cs,6\8\6887afd1634f7e398e52ba90412a99ada4d59272
+T
+$ShopProjectWebAPI/WeatherForecast.cs,b\b\bbe5d5fb30a4fda9901d9c8d59b0cb4d5a6ae657
+D
+DAL/Entities/User.cs,5\a\5a5e094cb4fb5c538afdbdc37bac769c6d03f905
+G
+DAL/Entities/Address.cs,c\9\c9e3526a5dccc172d3bdbd3ab441c1b68714430f
+d
+4ShopProjectWebAPI/Extensions/SwaggerConfiguration.cs,3\8\388da13a90732f09bdcfbc7929969544d107c5d5
+B
+BLL/DTO/UserDto.cs,5\8\58e28e0eaade22ffd7cfe8a02d9bf9eaa824d46f
+D
+BLL/DTO/SignUpDto.cs,9\e\9ef3619e2a5dfffbd48f903e1c2b6d78ad349aae
+_
+/DAL/Entities/OrderAggregate/AddressAggregate.cs,3\b\3b9173db9872a24ac539cdb0a23eca3c13340c97

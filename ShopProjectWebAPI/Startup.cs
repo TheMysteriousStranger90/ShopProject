@@ -1,13 +1,17 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Text;
 using System.Threading.Tasks;
-using BLL.Mapping;
+using AutoMapper;
+using BLL.Interfaces;
+using BLL.Services;
 using DAL;
 using DAL.Context;
 using DAL.Entities;
 using DAL.Interfaces;
 using DAL.Repositories;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -19,9 +23,11 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
+using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
 using ShopProjectWebAPI.Errors;
 using ShopProjectWebAPI.Extensions;
+using ShopProjectWebAPI.Mapping;
 using ShopProjectWebAPI.Middleware;
 using StackExchange.Redis;
 
@@ -63,7 +69,23 @@ namespace ShopProjectWebAPI
                     opts.Password.RequireUppercase = false;
                     opts.Password.RequireDigit = false; 
                 })
-                .AddEntityFrameworkStores<ShopProjectContext>().AddRoles<IdentityRole>();
+                .AddEntityFrameworkStores<ShopProjectContext>().AddRoles<IdentityRole>().AddSignInManager<SignInManager<User>>();
+            
+            services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
+                .AddJwtBearer(options => 
+                {
+                    options.TokenValidationParameters = new TokenValidationParameters
+                    {
+                        ValidateIssuerSigningKey = true,
+                        IssuerSigningKey  = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(Configuration["Token:Key"])),
+                        ValidIssuer = Configuration["Token:Issuer"],
+                        ValidateIssuer = true,
+                        ValidateAudience = false
+                    };
+                });
+            
+            services.AddAuthorization();
+            
             
             services.Configure<RequestLocalizationOptions>(options =>
             {
@@ -75,6 +97,7 @@ namespace ShopProjectWebAPI
             services.AddScoped<IUnitOfWork, UnitOfWork>();
             services.AddScoped<IProductRepository, ProductRepository>();
             services.AddScoped<IBasketRepository, BasketRepository>();
+            services.AddScoped<ITokenService, TokenService>();
             services.AddScoped(typeof(IRepository<>), (typeof(Repository<>)));
             services.Configure<ApiBehaviorOptions>(options =>
             {
@@ -94,7 +117,15 @@ namespace ShopProjectWebAPI
                 };
             });
             
+            /*
+            var mapperConfig = new MapperConfiguration(mc =>
+            {
+                mc.AddProfile(new AutomapperProfile());
+            });
             
+            IMapper mapper = mapperConfig.CreateMapper();
+            services.AddSingleton(mapper);
+            */
             
             services.AddAutoMapper(typeof(AutomapperProfile));
             
@@ -135,6 +166,7 @@ namespace ShopProjectWebAPI
 
             app.UseHttpsRedirection();
 
+            app.UseAuthentication();
             app.UseAuthorization();
 
             app.UseEndpoints(endpoints => { endpoints.MapControllers(); });
