@@ -58,6 +58,7 @@ namespace ShopProjectWebAPI
                 return ConnectionMultiplexer.Connect(config);
             });
             
+            /*
             services.AddIdentity<User, IdentityRole>(opts =>
                 {
                     opts.User.RequireUniqueEmail = true;
@@ -83,7 +84,8 @@ namespace ShopProjectWebAPI
                         ValidateAudience = false
                     };
                 });
-            
+            */
+            services.AddIdentityServices(Configuration);
             services.AddAuthorization();
             
             
@@ -94,7 +96,7 @@ namespace ShopProjectWebAPI
             
             
             
-            services.AddScoped<IUnitOfWork, UnitOfWork>();
+            //services.AddScoped<IUnitOfWork, UnitOfWork>();
             services.AddScoped<IProductRepository, ProductRepository>();
             services.AddScoped<IBasketRepository, BasketRepository>();
             services.AddScoped<ITokenService, TokenService>();
@@ -129,7 +131,7 @@ namespace ShopProjectWebAPI
             
             services.AddAutoMapper(typeof(AutomapperProfile));
             
-            services.AddSwaggerSettings(Configuration);
+            services.AddSwaggerSettings();
             
             services.AddControllers();
             

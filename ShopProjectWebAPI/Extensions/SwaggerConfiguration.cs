@@ -10,8 +10,7 @@ namespace ShopProjectWebAPI.Extensions
 {
     public static class SwaggerConfiguration
     {
-        public static IServiceCollection AddSwaggerSettings(this IServiceCollection services,
-            IConfiguration configuration)
+        public static IServiceCollection AddSwaggerSettings(this IServiceCollection services)
         {
             services.AddSwaggerGen(c =>
             {
@@ -28,40 +27,27 @@ namespace ShopProjectWebAPI.Extensions
                     }
                 });
 
-                c.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme
+                var securitySchema = new OpenApiSecurityScheme
                 {
-                    Description = @"Please enter your token...",
+                    Description = "JWT Auth Bearer Scheme",
                     Name = "Authorization",
                     In = ParameterLocation.Header,
                     Type = SecuritySchemeType.Http,
-                    Scheme = "Bearer"
-                });
-                c.AddSecurityRequirement(new OpenApiSecurityRequirement
-                {
+                    Scheme = "Bearer",
+                    Reference = new OpenApiReference
                     {
-                        new OpenApiSecurityScheme
-                        {
-                            Reference = new OpenApiReference
-                            {
-                                Type = ReferenceType.SecurityScheme,
-                                Id = "Bearer"
-                            },
-                            Scheme = "oauth2",
-                            Name = "Bearer",
-                            In = ParameterLocation.Header,
-                        },
-                        new List<string>()
+                        Type = ReferenceType.SecurityScheme,
+                        Id = "Bearer"
                     }
-                });
-                
-                
+                };
+
+                c.AddSecurityDefinition("Bearer", securitySchema);
+                var securityRequirement = new OpenApiSecurityRequirement{{securitySchema, new[] {"Bearer"}}};
+                c.AddSecurityRequirement(securityRequirement);
             });
+
             return services;
         }
-        
-        
-        
-        
         
     }
 }
