@@ -10,6 +10,8 @@ import { CarouselModule } from 'ngx-bootstrap/carousel';
 import { BasketSummaryComponent } from './basket-summary/basket-summary.component';
 import {RouterModule} from '@angular/router';
 import { OrderTotalsComponent } from './order-totals/order-totals.component';
+import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
+import { TextInputComponent } from './components/text-input/text-input.component';
 
 
 
@@ -18,15 +20,17 @@ import { OrderTotalsComponent } from './order-totals/order-totals.component';
     PagerComponent,
     PagingHeaderComponent,
     BasketSummaryComponent,
-    OrderTotalsComponent
+    OrderTotalsComponent,
+    TextInputComponent
   ],
   imports: [
     CommonModule,
     PaginationModule.forRoot(),
     CarouselModule.forRoot(),
+    BsDropdownModule.forRoot(),
     ReactiveFormsModule,
     FormsModule,
-    RouterModule
+    RouterModule,
   ],
   exports: [
     CarouselModule,
@@ -34,9 +38,11 @@ import { OrderTotalsComponent } from './order-totals/order-totals.component';
     PagingHeaderComponent,
     PagerComponent,
     ReactiveFormsModule,
+    BsDropdownModule,
     FormsModule,
     BasketSummaryComponent,
-    OrderTotalsComponent
+    OrderTotalsComponent,
+    TextInputComponent
   ]
 })
 export class SharedModule { }

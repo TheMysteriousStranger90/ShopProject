@@ -22,9 +22,37 @@
         {{getCount(basket.items)}}
       </div>
     </a>
+    <ng-container *ngIf="(accountService.currentUser$ | async) === null">
+      <a routerLink="/account/login" class="btn btn-dark me-2" href="#" style="background-color: #9f7aea; color: #212121; font-family: 'Berlin Sans FB'">Login</a>
+      <a routerLink="/account/register" class="btn btn-dark me-3" href="#" style="background-color: #9f7aea; color: #212121; font-family: 'Berlin Sans FB'">Sign up</a>
+    </ng-container>
 
-    <a class="btn btn-dark me-2" href="#" style="background-color: #9f7aea; color: #212121; font-family: 'Berlin Sans FB'">Login</a>
-    <a class="btn btn-dark me-3" href="#" style="background-color: #9f7aea; color: #212121; font-family: 'Berlin Sans FB'">Sign up</a>
+    <ng-container *ngIf="accountService.currentUser$ | async as user">
+      <div class="dropdown ms-3 me-5" style="cursor: pointer;" dropdown>
+        <a dropdownToggle class="dropdown-toggle">
+          <strong>Welcome {{user.name}}</strong>
+        </a>
+        <ul *dropdownMenu class="dropdown-menu dropdown-menu-right">
+          <li class="py-1">
+            <a routerLink="/basket" class="dropdown-item">
+              <i class="bi bi-cart-fill me-3"></i> View basket
+            </a>
+          </li>
+          <li class="py-1">
+            <a routerLink="/orders" class="dropdown-item">
+              <i class="bi bi-file-earmark-person-fill me-3"></i> View orders
+            </a>
+          </li>
+          <div class="dropdown-divider"></div>
+          <li class="py-1">
+            <a (click)="accountService.logout()" class="dropdown-item">
+              <i class="bi bi-door-open me-3"></i> Logout
+            </a>
+          </li>
+        </ul>
+      </div>
+    </ng-container>
+
   </div>
 </header>
 
