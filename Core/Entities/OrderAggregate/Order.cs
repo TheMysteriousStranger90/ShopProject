@@ -1,16 +1,15 @@
 ﻿using System;
 using System.Collections.Generic;
-using DAL.Entities.Enums;
-using DAL.Entities.OrderAggregate;
+using Core.Entities.Enums;
 
-namespace DAL.Entities
+namespace Core.Entities.OrderAggregate
 {
     public class Order : BaseEntity
     {
         public Order()
         {
         }
-
+        
         public Order(IReadOnlyList<OrderItem> orderItems, string buyerEmail, AddressAggregate shipToAddress, 
             DeliveryMethod deliveryMethod, decimal subtotal)
         {

@@ -1,13 +1,13 @@
 ﻿using System;
 using System.Collections;
 using System.Threading.Tasks;
-using DAL.Context;
-using DAL.Entities;
-using DAL.Interfaces;
-using DAL.Repositories;
+using Core.Entities;
+using Core.Interfaces;
+using Infrastructure.Context;
+using Infrastructure.Repositories;
 using Microsoft.AspNetCore.Identity;
 
-namespace DAL
+namespace Infrastructure
 {
     public class UnitOfWork : IUnitOfWork, IDisposable
     {

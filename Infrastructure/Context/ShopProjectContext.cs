@@ -1,4 +1,5 @@
 ﻿using Core.Entities;
+using Core.Entities.OrderAggregate;
 using Infrastructure.Configurations;
 using Infrastructure.SeedData;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
@@ -33,7 +34,7 @@ namespace Infrastructure.Context
             base.OnModelCreating(modelBuilder);
             
             modelBuilder.ApplyConfiguration(new UserConfiguration());
-            modelBuilder.ApplyConfiguration(new DeliveryMethodConiguration());
+            modelBuilder.ApplyConfiguration(new DeliveryMethodConfiguration());
             modelBuilder.ApplyConfiguration(new ProductConfiguration());
             modelBuilder.ApplyConfiguration(new OrderItemConfiguration());
             modelBuilder.ApplyConfiguration(new OrderConfiguration());

@@ -96,9 +96,10 @@ namespace ShopProjectWebAPI
             
             
             
-            //services.AddScoped<IUnitOfWork, UnitOfWork>();
+            services.AddScoped<IUnitOfWork, UnitOfWork>();
             services.AddScoped<IProductRepository, ProductRepository>();
             services.AddScoped<IBasketRepository, BasketRepository>();
+            services.AddScoped<IOrderService, OrderService>();
             services.AddScoped<ITokenService, TokenService>();
             services.AddScoped(typeof(IRepository<>), (typeof(Repository<>)));
             services.Configure<ApiBehaviorOptions>(options =>

@@ -7,42 +7,6 @@ namespace DAL.SeedData
 {
     public class SeedInitializer
     {
-        public static async Task InitializeAsync(UserManager<User> userManager, RoleManager<IdentityRole> roleManager)
-        {
-            string adminEmail = "lev.myshkin@outlook.com";
-            string password = "Myshkin0101";
-            if (await roleManager.FindByNameAsync("Administrator") == null)
-            {
-                await roleManager.CreateAsync(new IdentityRole("Administrator"));
-            }
-
-            if (await roleManager.FindByNameAsync("User") == null)
-            {
-                await roleManager.CreateAsync(new IdentityRole("User"));
-            }
-
-            if (await userManager.FindByNameAsync(adminEmail) == null)
-            {
-                User admin = new User
-                {
-                    Name = "LevMyshkin", Email = adminEmail, UserName = adminEmail, Address = new Address
-                    {
-                        FirstName = "Lev",
-                        LastName = "Myshkin",
-                        Street = "Bolshoy Prospekt 4",
-                        City = "Saint Petersburg",
-                        State = "Len. Obl.",
-                        Zipcode = "190000"
-                    }
-                };
-                IdentityResult result = await userManager.CreateAsync(admin, password);
-                if (result.Succeeded)
-                {
-                    await userManager.AddToRoleAsync(admin, "Administrator");
-                }
-            }
-        }
-
         public static void ContextSeed(ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<ProductType>().HasData(
@@ -107,6 +71,25 @@ namespace DAL.SeedData
                         "Lightning Speed - Harness the power of a custom CPU, GPU, and SSD with Integrated I/O that rewrite the rules of what a PlayStation console can do",
                     Price = new decimal(400.00), PictureUrl = "images/products/console2.jpg", ProductBrandId = 4,
                     ProductTypeId = 2
+                }
+            );
+            
+            modelBuilder.Entity<DeliveryMethod>().HasData(
+                new DeliveryMethod()
+                {
+                    Id = 1, ShortName = "UPS1", Description = "Fastest delivery time", DeliveryTime = "1-2 Days", Price = 10
+                },
+                new DeliveryMethod()
+                {
+                    Id = 2, ShortName = "UPS2", Description = "Get it within 5 days", DeliveryTime = "2-5 Days", Price = 5
+                },
+                new DeliveryMethod()
+                {
+                    Id = 3, ShortName = "UPS3", Description = "Slower but cheap", DeliveryTime = "5-10 Days", Price = 2
+                },
+                new DeliveryMethod()
+                {
+                    Id = 4, ShortName = "FREE", Description = "Free! You get what you pay for", DeliveryTime = "1-2 Weeks", Price = 0
                 }
             );
         }

@@ -1,10 +1,9 @@
 ﻿using AutoMapper;
-using BLL.DTO;
 using DAL.Entities;
 using Microsoft.Extensions.Configuration;
 using ShopProjectWebAPI.DTO;
 
-namespace BLL.Helpers
+namespace ShopProjectWebAPI.Helpers
 {
     public class ProductUrlResolver : IValueResolver<Product, ProductDto, string>
     {

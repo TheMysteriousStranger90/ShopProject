@@ -1,9 +1,9 @@
 ﻿using AutoMapper;
 using BLL.DTO;
-using BLL.Helpers;
 using DAL.Entities;
 using DAL.Entities.OrderAggregate;
 using ShopProjectWebAPI.DTO;
+using ShopProjectWebAPI.Helpers;
 
 
 namespace ShopProjectWebAPI.Mapping

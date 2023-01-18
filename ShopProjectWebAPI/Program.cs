@@ -27,7 +27,7 @@ namespace ShopProjectWebAPI
                 {
                     var userManager = services.GetRequiredService<UserManager<User>>();
                     var rolesManager = services.GetRequiredService<RoleManager<IdentityRole>>();
-                    await SeedInitializer.InitializeAsync(userManager, rolesManager);
+                    await RoleInitializer.InitializeAsync(userManager, rolesManager);
                 }
                 catch (Exception ex)
                 {

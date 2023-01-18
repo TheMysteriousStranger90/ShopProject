@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using Core.Entities.OrderAggregate;
 using Microsoft.AspNetCore.Identity;
 
 namespace Core.Entities
