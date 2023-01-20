@@ -6,7 +6,6 @@ using Microsoft.EntityFrameworkCore;
 
 namespace Core.Entities
 {
-    [Owned]
     public class Address
     {
         public string FirstName { get; set; }
