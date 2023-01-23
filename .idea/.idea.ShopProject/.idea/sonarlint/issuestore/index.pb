@@ -247,3 +247,23 @@ L
 Core/Entities/ProductType.cs,8\f\8f3cb3784b28ae1f83b83b5476b85781b7537fbc
 M
 Core/Entities/ProductBrand.cs,e\9\e9061fe4c8e495b6814f0f14e87b8afaefa0ea9a
+H
+Core/Entities/Product.cs,4\c\4c0c36c298b0ec3240fd67a8266ffbd1845cb633
+O
+Core/Entities/CustomerBasket.cs,8\c\8c8264d7547ba8317170d6a65ba76c8c40c33220
+R
+"Core/Entities/Enums/OrderStatus.cs,8\6\86e4e50b579ebcbdf440fcea366bb16bce5ed709
+`
+0Core/Entities/OrderAggregate/AddressAggregate.cs,2\f\2fbc5ad96fd02641138b65943d6f398b2a9efc81
+^
+.Core/Entities/OrderAggregate/DeliveryMethod.cs,c\7\c749e271524fa6c452bd93f4f52a6e31d274185f
+U
+%Core/Entities/OrderAggregate/Order.cs,c\f\cf47f58184c98e6cfc58e1936009ce9e9a1fde7f
+Y
+)Core/Entities/OrderAggregate/OrderItem.cs,4\2\428bd757764c953f294c0c6d9cf9cd36832b6f73
+b
+2Core/Entities/OrderAggregate/ProductItemOrdered.cs,7\8\78b9ab848f898e66e1b162188f069720f8988e55
+K
+Core/Entities/BasketItem.cs,b\7\b727d50cb973a1562549eeecdcdf991bf30277d3
+H
+Core/Entities/Address.cs,d\f\df1020e13437e7cd4081cd9097462b22ed6a8acd
