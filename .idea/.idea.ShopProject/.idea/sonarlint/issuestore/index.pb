@@ -267,3 +267,5 @@ K
 Core/Entities/BasketItem.cs,b\7\b727d50cb973a1562549eeecdcdf991bf30277d3
 H
 Core/Entities/Address.cs,d\f\df1020e13437e7cd4081cd9097462b22ed6a8acd
+O
+DAL/SeedData/RoleInitializer.cs,d\1\d1243af086c099be0c849cfdaac6f8b43a031acf
