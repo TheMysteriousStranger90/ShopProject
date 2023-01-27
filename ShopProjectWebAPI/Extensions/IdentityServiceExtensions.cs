@@ -1,6 +1,6 @@
 ﻿using System.Text;
-using DAL.Context;
-using DAL.Entities;
+using Core.Entities;
+using Infrastructure.Context;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.Extensions.Configuration;

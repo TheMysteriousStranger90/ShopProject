@@ -1,8 +1,7 @@
 ﻿using System.Threading.Tasks;
 using AutoMapper;
-using BLL.DTO;
-using DAL.Entities;
-using DAL.Interfaces;
+using Core.Entities;
+using Core.Interfaces;
 using Microsoft.AspNetCore.Mvc;
 using ShopProjectWebAPI.DTO;
 

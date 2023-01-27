@@ -1,8 +1,7 @@
 ﻿using System.Threading.Tasks;
 using AutoMapper;
-using BLL.DTO;
-using BLL.Interfaces;
-using DAL.Entities;
+using Core.Entities;
+using Core.Interfaces;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;

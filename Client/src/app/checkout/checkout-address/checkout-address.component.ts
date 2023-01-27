@@ -15,7 +15,10 @@ export class CheckoutAddressComponent {
 
   saveUserAddress() {
     this.accountService.updateUserAddress(this.checkoutForm?.get('addressForm')?.value).subscribe({
-      next: () => this.toastr.success('Address saved')
+      next: () => {
+        this.toastr.success('Address saved');
+        this.checkoutForm?.get('addressForm')?.reset(this.checkoutForm?.get('addressForm')?.value);
+      }
     })
   }
 }

@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using DAL.Entities;
-using DAL.Entities.OrderAggregate;
+using Core.Entities.OrderAggregate;
 
 namespace ShopProjectWebAPI.DTO
 {

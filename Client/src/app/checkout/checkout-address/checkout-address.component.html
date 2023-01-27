@@ -1,6 +1,6 @@
 <div class="mt-4" *ngIf="checkoutForm" [formGroup]="checkoutForm">
   <div class="d-flex justify-content-between align-items-center">
-    <h4>Shipping address</h4>
+    <h4 style="color: whitesmoke">Shipping address</h4>
     <button class="btn btn-light mb-3" style="background-color: whitesmoke; color: black"
             (click)="saveUserAddress()"
             [disabled]="!checkoutForm.get('addressForm')?.valid ||
@@ -29,4 +29,16 @@
       <app-text-input [label]="'Zip code'" formControlName="zipcode"></app-text-input>
     </div>
   </div>
+</div>
+
+<div class="d-flex justify-content-between flex-row mb-5">
+</div>
+
+<div class="d-flex justify-content-between flex-row mb-5">
+  <button class="btn btn-dark" style="background-color: #9f7aea; color: #212121; font-family: 'Berlin Sans FB'" routerLink="/basket">
+    <i class="fa fa-angle-left"></i> Back to basket
+  </button>
+  <button [disabled]="checkoutForm?.get('addressForm')?.invalid" class="btn btn-dark" style="background-color: #9f7aea; color: #212121; font-family: 'Berlin Sans FB'" cdkStepperNext>
+    Go to Delivery <i class="fa fa-angle-right"></i>
+  </button>
 </div>

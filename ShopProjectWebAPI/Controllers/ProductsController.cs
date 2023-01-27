@@ -1,10 +1,9 @@
 ﻿using System.Collections.Generic;
 using System.Threading.Tasks;
 using AutoMapper;
-using BLL.DTO;
-using DAL.Entities;
-using DAL.Interfaces;
-using DAL.Specifications;
+using Core.Entities;
+using Core.Interfaces;
+using Core.Specifications;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using ShopProjectWebAPI.DTO;

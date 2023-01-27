@@ -1,5 +1,5 @@
 ﻿using AutoMapper;
-using DAL.Entities;
+using Core.Entities.OrderAggregate;
 using Microsoft.Extensions.Configuration;
 using ShopProjectWebAPI.DTO;
 

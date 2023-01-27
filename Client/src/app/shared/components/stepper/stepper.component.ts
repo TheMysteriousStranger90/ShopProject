@@ -11,30 +11,12 @@ import { Subscription } from 'rxjs';
 export class StepperComponent extends CdkStepper  implements OnInit, OnDestroy {
 
   @Input() linearModeSelected = true;
-  @Input() submitLabel = 'Submit';
-  @Output() complete = new EventEmitter<any>();
-  subscription?: Subscription;
-  index = 0;
 
   ngOnInit(): void {
-    this.subscription = this.selectionChange.subscribe({
-      next: (value: StepperSelectionEvent) => {
-        this.index = value.selectedIndex;
-      }
-    })
+    this.linear = this.linearModeSelected;
   }
 
-  submitForm() {
-    this.complete.emit(true);
-  }
-
-  get nextButtonLabel() {
-    return this.steps.length === this.index + 1
-      ? this.submitLabel
-      : 'Go to ' + this.steps.find((_, i) => i === this.index+1)?.label
-  }
-
-  override ngOnDestroy(): void {
-    this.subscription?.unsubscribe();
+  onClick(index: number) {
+    this.selectedIndex = index;
   }
 }

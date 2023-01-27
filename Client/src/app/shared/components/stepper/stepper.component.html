@@ -3,26 +3,18 @@
     <li class="nav-item" *ngFor="let step of steps; let i = index">
       <div class="d-grid">
         <button
+          (click)="onClick(i)"
+          [disabled]="true"
           [class.active]="selectedIndex === i"
-          class="nav-link py-3 text-uppercase fw-bold" style="background-color: #9f7aea;">
-          {{step.label}}:{{step.completed}}
+          class="nav-link py-3 text-uppercase fw-bold"
+          style="background-color: #9f7aea"
+        >
+          {{step.label}}
         </button>
       </div>
     </li>
   </ul>
   <div *ngIf="selected">
     <ng-container [ngTemplateOutlet]="selected.content"></ng-container>
-  </div>
-
-  <div class="d-flex justify-content-between flex-row mb-5">
-    <button class="btn " style="background-color: #9f7aea; color: black" cdkStepperPrevious>
-      <i class="fa fa-angle-left"></i> Previous
-    </button>
-    <button *ngIf="nextButtonLabel !== submitLabel" class="btn" style="background-color: #9f7aea; color: black" cdkStepperNext>
-      {{nextButtonLabel}} <i class="fa fa-angle-right"></i>
-    </button>
-    <button *ngIf="nextButtonLabel === submitLabel" (click)="submitForm()" class="btn" style="background-color: #9f7aea; color: black">
-      {{nextButtonLabel}} <i class="fa fa-angle-right"></i>
-    </button>
   </div>
 </div>

@@ -1,7 +1,6 @@
 ﻿using AutoMapper;
-using BLL.DTO;
-using DAL.Entities;
-using DAL.Entities.OrderAggregate;
+using Core.Entities;
+using Core.Entities.OrderAggregate;
 using ShopProjectWebAPI.DTO;
 using ShopProjectWebAPI.Helpers;
 

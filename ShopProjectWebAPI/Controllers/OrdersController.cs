@@ -3,9 +3,8 @@ using System.Linq;
 using System.Security.Claims;
 using System.Threading.Tasks;
 using AutoMapper;
-using BLL.Interfaces;
-using DAL.Entities;
-using DAL.Entities.OrderAggregate;
+using Core.Entities.OrderAggregate;
+using Core.Interfaces;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using ShopProjectWebAPI.DTO;
@@ -28,8 +27,7 @@ namespace ShopProjectWebAPI.Controllers
         [HttpPost]
         public async Task<ActionResult<OrderToReturnDto>> CreateOrder(OrderDto orderDto)
         {
-            //HttpContext.User?.Claims?.FirstOfDefault(x => x.Type == ClaimTypes.Email)?.Value
-            var email = HttpContext.User?.Claims?.FirstOrDefault(x => x.Type == ClaimTypes.Email)?.Value;
+            var email = HttpContext.User.RetrieveEmailFromPrincipal();
 
             var address = _mapper.Map<AddressDto, AddressAggregate>(orderDto.ShipToAddress);
 

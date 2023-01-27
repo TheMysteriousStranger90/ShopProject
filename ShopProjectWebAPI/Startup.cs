@@ -1,16 +1,12 @@
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using AutoMapper;
-using BLL.Interfaces;
-using BLL.Services;
-using DAL;
-using DAL.Context;
-using DAL.Entities;
-using DAL.Interfaces;
-using DAL.Repositories;
+using Core.Interfaces;
+using Infrastructure;
+using Infrastructure.Context;
+using Infrastructure.Repositories;
+using Infrastructure.Services;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -21,6 +17,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.FileProviders;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.IdentityModel.Tokens;
@@ -96,11 +93,13 @@ namespace ShopProjectWebAPI
             
             
             
-            services.AddScoped<IUnitOfWork, UnitOfWork>();
+            
             services.AddScoped<IProductRepository, ProductRepository>();
             services.AddScoped<IBasketRepository, BasketRepository>();
+            services.AddScoped<IUnitOfWork, UnitOfWork>();
             services.AddScoped<IOrderService, OrderService>();
             services.AddScoped<ITokenService, TokenService>();
+            services.AddScoped<IPaymentService, PaymentService>();
             services.AddScoped(typeof(IRepository<>), (typeof(Repository<>)));
             services.Configure<ApiBehaviorOptions>(options =>
             {
@@ -161,6 +160,12 @@ namespace ShopProjectWebAPI
 
             app.UseRouting();
             app.UseStaticFiles();
+            
+            app.UseStaticFiles(new StaticFileOptions
+            {
+                FileProvider = new PhysicalFileProvider(
+                    Path.Combine(Directory.GetCurrentDirectory(), "Content")), RequestPath = "/Content"
+            });
 
             app.UseCors(x => x
                 .AllowAnyOrigin()
