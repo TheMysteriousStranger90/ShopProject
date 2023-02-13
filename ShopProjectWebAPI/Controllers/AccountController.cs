@@ -13,24 +13,22 @@ namespace ShopProjectWebAPI.Controllers
 {
     public class AccountController : BaseApiController
     {
-        private readonly UserManager<User> _userManager;
-        private readonly SignInManager<User> _signInManager;
+        private readonly IUnitOfWork _unitOfWork;
         private readonly ITokenService _tokenService;
         private readonly IMapper _mapper;
-        public AccountController(UserManager<User> userManager, SignInManager<User> signInManager,
+        public AccountController(IUnitOfWork unitOfWork,
             ITokenService tokenService, IMapper mapper)
         {
+            _unitOfWork = unitOfWork;
             _mapper = mapper;
             _tokenService = tokenService;
-            _signInManager = signInManager;
-            _userManager = userManager;
         }
 
         [Authorize]
         [HttpGet]
         public async Task<ActionResult<UserDto>> GetCurrentUser()
         {
-            var user = await _userManager.FindByEmailFromClaimsPrincipal(User);
+            var user = await _unitOfWork.UserManager.FindByEmailFromClaimsPrincipal(User);
 
             return new UserDto
             {
@@ -43,11 +41,11 @@ namespace ShopProjectWebAPI.Controllers
         [HttpPost("login")]
         public async Task<ActionResult<UserDto>> Login(LoginDto loginDto)
         {
-            var user = await _userManager.FindByEmailAsync(loginDto.Email);
+            var user = await _unitOfWork.UserManager.FindByEmailAsync(loginDto.Email);
 
             if (user == null) return Unauthorized(new ApiResponse(401));
 
-            var result = await _signInManager.CheckPasswordSignInAsync(user, loginDto.Password, false);
+            var result = await _unitOfWork.SignInManager.CheckPasswordSignInAsync(user, loginDto.Password, false);
 
             if (!result.Succeeded) return Unauthorized(new ApiResponse(401));
 
@@ -75,7 +73,7 @@ namespace ShopProjectWebAPI.Controllers
                 UserName = registerDto.Email
             };
 
-            var result = await _userManager.CreateAsync(user, registerDto.Password);
+            var result = await _unitOfWork.UserManager.CreateAsync(user, registerDto.Password);
 
             if (!result.Succeeded) return BadRequest(new ApiResponse(400));
 
@@ -90,14 +88,14 @@ namespace ShopProjectWebAPI.Controllers
         [HttpGet("emailexists")]
         public async Task<ActionResult<bool>> CheckEmailExistsAsync([FromQuery] string email)
         {
-            return await _userManager.FindByEmailAsync(email) != null;
+            return await _unitOfWork.UserManager.FindByEmailAsync(email) != null;
         }
 
         [Authorize]
         [HttpGet("address")]
         public async Task<ActionResult<AddressDto>> GetUserAddress()
         {
-            var user = await _userManager.FindUserByClaimsPrincipleWithAddress(User);
+            var user = await _unitOfWork.UserManager.FindUserByClaimsPrincipleWithAddress(User);
 
             return _mapper.Map<Address, AddressDto>(user.Address);
         }
@@ -106,11 +104,11 @@ namespace ShopProjectWebAPI.Controllers
         [HttpPut("address")]
         public async Task<ActionResult<AddressDto>> UpdateUserAddress(AddressDto address)
         {
-            var user = await _userManager.FindUserByClaimsPrincipleWithAddress(User);
+            var user = await _unitOfWork.UserManager.FindUserByClaimsPrincipleWithAddress(User);
 
             user.Address = _mapper.Map<AddressDto, Address>(address);
 
-            var result = await _userManager.UpdateAsync(user);
+            var result = await _unitOfWork.UserManager.UpdateAsync(user);
 
             if (result.Succeeded) return Ok(_mapper.Map<AddressDto>(user.Address));
 
